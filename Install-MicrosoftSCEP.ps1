@@ -19,7 +19,7 @@ if ($count -eq 50) {
 
 #Now, let's update the definitions for SCEP...
 Write-Output "Updating System Center Endpoint Protection definitions..."
-Import-Module “$env:ProgramFiles\Microsoft Security Client\MpProvider”;
+Import-Module "$env:ProgramFiles\Microsoft Security Client\MpProvider";
 Update-MProtSignature -UpdateSource MicrosoftUpdateServer;
 
 Write-Output "Update complete, performing Quick Scan."

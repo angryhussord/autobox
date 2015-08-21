@@ -1,5 +1,6 @@
 function Move-LibraryDirectory {
 <#
+Originally written by mrock. I've just added some specific support to this that he doesn't currently have.
 .SYNOPSIS
 Moves a Windows Library folder (My Pictures, personal, downloads, etc) to the given path
 .DESCRIPTION
@@ -28,6 +29,8 @@ Get-LibraryNames
     if($libraryName.ToLower() -eq "downloads"){
         $libraryName="{374DE290-123F-4565-9164-39C4925E467B}";
     }
+
+    #Adding SkyDrive / OneDrive support here as well
     if($libraryName.ToLower() -eq "skydrive" -or $libraryName.ToLower() -eq "onedrive"){
         $libraryName="{A52BBA46-E9E1-435F-B3D9-28DAA648C0F6}";
     }
