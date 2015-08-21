@@ -1,0 +1,80 @@
+7zip
+adobeair
+adobereader
+audacity
+autohotkey
+avidemux
+battle.net
+beyondcompare
+borderlessgaming -version 8.2
+calibre
+cccp
+ccenhancer
+ccleaner
+cdburnerxp
+cpu-z
+crystaldiskinfo
+equalizerapo -version 0.9.2
+f.lux
+fiddler4
+filezilla
+Fitbit.Connect
+geforce-game-ready-driver -version 355.60
+gimp
+git
+githubforwindows
+google-chrome-x64
+hashtab -version 5.2.0.14
+handbrake
+hexchat
+hwmonitor
+imgburn
+iTunes
+joytokey
+jre8
+leagueoflegends
+LogParser
+logparserstudio
+logitechgaming -version 8.70.315
+MakeMKV
+malwarebytes
+microsoft-message-analyzer
+mkvtoolnix
+mpc-hc
+msiafterburner -version 4.1.1
+mumble
+networkmonitor
+notepadplusplus
+obs
+origin
+paint.net -version 4.06
+passwordSafe
+pdfcreator
+perfview
+picard
+picasa
+PoshCode
+PSWindowsUpdate
+putty
+rdcman
+realtekhdaudio -version 2.79
+roomeqwizard -version 5.12
+Recuva
+Secunia.PSI
+skype
+speccy
+SublimeText3
+spotify
+spybot
+stylecop
+sysinternals
+teamspeak
+transmission-qt
+unchecky
+ussf
+vidcoder
+vlc
+winrar
+winscp
+wireshark
+xbox-one-controller
