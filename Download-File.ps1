@@ -7,7 +7,7 @@ function Valid-UrlFormat {
 
 function Download-File {
 
-    # Download-File -url 'https://chocolateypackages.s3.amazonaws.com/borderlessgaming.8.2.nupkg' -path 'D:\SkyDrive\Scripts' -IgnoreSSLCertErrors
+    # Usage: Download-File -url 'https://chocolateypackages.s3.amazonaws.com/borderlessgaming.8.2.nupkg' -path 'D:\SkyDrive\Scripts' -IgnoreSSLCertErrors
 
     param(
         [System.Uri]$url,

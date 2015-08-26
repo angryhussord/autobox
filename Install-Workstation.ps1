@@ -3,6 +3,7 @@
 #Purpose: After re-installing Windows, this will install chocolatey, install packages, then install
 #	custom packages that Chocolatey cannot/does not support.
 
+#Make sure PowerShell help is useful
 Update-Help
 
 #Always start with Anti-virus software in case any of the below is compromised.
@@ -11,6 +12,12 @@ Update-Help
 #Setup local user profile and add features
 . .\Restart-Explorer.ps1
 .\Move-UserShellFolders.ps1
+Move-LibraryDirectory 'My Music' 'D:\Music'
+Move-LibraryDirectory 'My Pictures' 'D:\Pictures'
+Move-LibraryDirectory 'My Videos' 'D:\Videos'
+Move-LibraryDirectory 'Personal' 'D:\Documents'
+Move-LibraryDirectory 'OneDrive' 'D:\OneDrive'
+Move-LibraryDirectory 'Downloads' 'D:\Downloads'
 .\Install-GodMode.ps1
 .\Install-TelnetClient.ps1
 . .\Set-WindowsExplorerOptions.ps1

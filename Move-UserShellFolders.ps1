@@ -45,10 +45,3 @@ Get-LibraryNames
     Restart-Explorer
     if(!$DoNotMoveOldContent) { Move-Item -Force $oldPath/* $newPath }
 }
-
-Move-LibraryDirectory 'My Music' 'D:\Music'
-Move-LibraryDirectory 'My Pictures' 'D:\Pictures'
-Move-LibraryDirectory 'My Videos' 'D:\Videos'
-Move-LibraryDirectory 'Personal' 'D:\Documents'
-Move-LibraryDirectory 'OneDrive' 'D:\OneDrive'
-Move-LibraryDirectory 'Downloads' 'D:\Downloads'

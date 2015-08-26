@@ -45,18 +45,22 @@ http://boxstarter.org
 	)
 
 	$PSBoundParameters.Keys | % {
-        if($_-like "En*"){ $other="Dis" + $_.Substring(2)}
-        if($_-like "Dis*"){ $other="En" + $_.Substring(3)}
-        if($PSBoundParameters[$_] -and $PSBoundParameters[$other]) {
-            throw new-Object -TypeName ArgumentException "You may not set both $_ and $other. You can only set one."
-        }
-    }
+        	if($_-like "En*"){
+			$other="Dis" + $_.Substring(2);
+		}
+	        if($_-like "Dis*"){
+			$other="En" + $_.Substring(3);
+		}
+	        if($PSBoundParameters[$_] -and $PSBoundParameters[$other]) {
+	            throw new-Object -TypeName ArgumentException "You may not set both $_ and $other. You can only set one."
+		}
+	}
 
 	$key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer'
-    $advancedKey = "$key\Advanced"
+	$advancedKey = "$key\Advanced"
 	$cabinetStateKey = "$key\CabinetState"
 
-    Write-Output "Setting Windows Explorer options..."
+	Write-Output "Setting Windows Explorer options..."
 
 	if(Test-Path -Path $advancedKey) {
 		if($EnableShowHiddenFilesFoldersDrives) {Set-ItemProperty $advancedKey Hidden 1}

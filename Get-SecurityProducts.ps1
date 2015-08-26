@@ -1,4 +1,3 @@
-function Get-SecurityProducts { 
 [CmdletBinding()] 
 param ( 
 	[parameter(ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)] 
@@ -63,5 +62,3 @@ foreach ($av in $products) {
 }		
 
 return $av_products;
-
-}
