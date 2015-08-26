@@ -49,9 +49,7 @@ function Download-File {
         }
         $client.Headers.Add("Accept-Language", "en-us,en;q=0.5");
         $client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.4) Gecko/20060508 Firefox/1.5.0.4");
-        $file = $client.DownloadString($url);
-        $file | Set-Content $path;
-    } else {
-        $client.DownloadFile( $url, $path );       
     }
+
+    $client.DownloadFile( $url, $path );
 }
