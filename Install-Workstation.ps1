@@ -19,7 +19,7 @@ Move-LibraryDirectory 'Personal' 'D:\Documents'
 Move-LibraryDirectory 'OneDrive' 'D:\OneDrive'
 Move-LibraryDirectory 'Downloads' 'D:\Downloads'
 .\Install-GodMode.ps1
-.\Install-TelnetClient.ps1
+.\Install-WindowsFeature.ps1 TelnetClient
 . .\Set-WindowsExplorerOptions.ps1
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 . .\Enable-RemoteDesktop.ps1
