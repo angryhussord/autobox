@@ -1,11 +1,12 @@
 #Download ISO image
 #VS 2015 Pro
+. ..\Download-File.ps1
+
 $url = "http://download.microsoft.com/download/5/8/9/589A8843-BA4D-4E63-BCB2-B2380E5556FD/vs2015.pro_enu.iso";
-$path = (Get-Location).Path + "\vs2015.pro_enu.iso";
+$path = (Get-Location).Path;
 if ((Get-Item vs2015.pro_enu.iso -ErrorAction:SilentlyContinue).count -eq 0) {
-	$client = new-object System.Net.WebClient;
 	Write-Output "Downloading Visual Studio 2015 Professional ISO. This can take quite some time, please be patient...";
-	$client.DownloadFile( $url, $path );
+	Download-File $url $path;
 } else {
 	Write-Output "Using local copy of the ISO...";
 }
