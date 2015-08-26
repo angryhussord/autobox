@@ -3,34 +3,48 @@
 #Purpose: After re-installing Windows, this will install chocolatey, install packages, then install
 #	custom packages that Chocolatey cannot/does not support.
 
+Update-Help
 
-Write-Output "Moving User Shell Folders to D:\"
+#Always start with Anti-virus software in case any of the below is compromised.
+.\bitdefender\Install-BitDefender.ps1
+
+#Setup local user profile and add features
+. .\Restart-Explorer.ps1
 .\Move-UserShellFolders.ps1
-
-Write-Output "Installing Chocolatey."
-.\Install-Chocolatey.ps1
-Write-Output "Installation complete."
-
-Write-Output "Installing GodMode shortcut."
 .\Install-GodMode.ps1
-Write-Output "Installation complete."
-
-Write-Output "Installing Telnet Client."
 .\Install-TelnetClient.ps1
-Write-Output "Installation complete."
+. .\Set-WindowsExplorerOptions.ps1
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+. .\Enable-RemoteDesktop.ps1
+Enable-RemoteDesktop
 
-Write-Output "Installing workstation packages via Chocolatey."
+#Install chocolatey
+.\Install-Chocolatey.ps1
+
+#Install chocolatey packages
 .\Install-WorkstationPackages.ps1 Workstation-Packages.txt
-Write-Output "Installation complete."
 
-#Install Office 2013 SP1 w/Updates
-Write-Output "Installing Office 2013 SP1."
-cd .\office2013\
-.\Install-Office2013.ps1
-cd ..
-Write-Output "Installation complete."
+#Copy over config files
+.\Copy-EqualizerAPOConfig.ps1
+.\Copy-JoyToKeyConfig.ps1
 
-Write-Output "Workstation configuration complete."
+#Add VLC Bluray Support
+.\vlc-bluray\Install-VLCBluray.ps1
+
+#Add SubmlimeText3 PowerShell support
+.\SublimeText3\Install-PowerShellSupport.ps1
+
+#Install Visual Studio 2015
+.\VisualStudio2015\Install-VisualStudio.ps1
+
+#Install Office 2013
+.\office2013\Install-Office2013.ps1
+
+#Import Start Menu Layout
+Import-StartLayout -LayoutPath .\DefaultLayout.bin -MountPath C:\
+
+#Install RSAT tools for Windows 10
+.\Install-Windows10RSAT.ps1
 
 Write-Output "Installing Windows Updates..."
 Import-Module PSWindowsUpdate

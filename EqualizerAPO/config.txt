@@ -1,0 +1,42 @@
+Filter Settings file
+
+
+Dated: March 14th, 2015 03:23:23 AM
+
+
+Notes: NoAudiophile.com Micca PB42x/MB42x MK II Correction
+
+
+Preamp: 0.0 dB
+
+
+Filter 1: ON  PK	Fc   67.7 Hz  Gain  1.3 dB  Q  2.0
+
+Filter 1: ON  PK	Fc   140 Hz  Gain  -2.0 dB  Q  1.0
+
+Filter 1: ON  PK	Fc   345 Hz  Gain  -2.9 dB Q 0.3
+
+Filter 1: ON  PK	Fc   675 Hz  Gain  2.8 dB Q 3.0
+
+Filter 1: ON  PK	Fc   870 Hz  Gain  -1.9 dB Q 3.0
+
+Filter 1: ON  PK	Fc   1235 Hz  Gain  -5.1 dB  Q  2.0
+
+Filter 1: ON  PK	Fc   1785 Hz  Gain  -1.1 dB  Q  6.0
+
+Filter 1: ON  PK	Fc   2235 Hz  Gain  1.3 dB  Q  4.0
+
+Filter 1: ON  PK	Fc   3080 Hz  Gain  -1.2 dB  Q  4.0
+
+Filter 1: ON  PK	Fc   4500 Hz  Gain  2.0 dB  Q  2.0
+
+Filter 1: ON  PK	Fc   6300 Hz  Gain  -3.4 dB  Q  2.0
+
+Filter 1: ON  PK	Fc   7000 Hz  Gain  -2.8 dB  Q 2.5
+
+Filter 1: ON  PK	Fc   9000 Hz  Gain  -2.2 dB Q 0.3
+
+Filter 1: ON  PK	Fc   9700 Hz  Gain  -1.7 dB  Q  3.0
+
+Filter 1: ON  PK	Fc   14000 Hz  Gain  -2.5 dB  Q  0.8
+
