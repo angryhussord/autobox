@@ -1,4 +1,26 @@
 function Restart-Explorer {
+<#
+.SYNOPSIS
+    Restarts the Explorer.exe process in Windows.
+ 
+    Author: @mwrock
+ 
+.DESCRIPTION
+    Restarts Explorer.exe in Windows after making changes to it's configuration.
+ 
+.EXAMPLE
+ 
+    Restart-Explorer    
+ 
+.INPUTS None
+ 
+.OUTPUTS None
+ 
+.LINK
+ 
+    https://github.com/mwrock
+#>
+
 
     try{
         Write-Output "Restarting the Windows Explorer process..."

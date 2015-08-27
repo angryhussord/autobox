@@ -1,3 +1,32 @@
+<#
+.SYNOPSIS
+    Installs listed chocolatey packages.
+    Author: Patrick Hufford (angryhussord@outlook.com)
+ 
+.DESCRIPTION
+    Given a text file input of packages, one on a line (including the -version) this will run through each package in the list and install it.
+ 
+.PARAMETER PackageList
+ 
+    The text file that contains the list of packages (and -version) of each package you wish to install.
+ 
+.EXAMPLE
+ 
+    .\Install-WorkstationPackages.ps1 Workstation-Packages.txt
+ 
+.INPUTS
+ 
+    Text file
+ 
+.OUTPUTS
+ 
+    None
+ 
+.LINK
+ 
+    https://github.com/angryhussord/
+#>
+
 [CmdletBinding()]
 param
 (

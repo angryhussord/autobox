@@ -1,3 +1,27 @@
+<#
+.SYNOPSIS
+    Downloads and installs VLC Blu-ray support.
+    Author: Patrick Hufford (angryhussord@outlook.com)
+
+.DESCRIPTION
+    Downloads and installs VLC Blu-ray support from whoknowsmyname.com and
+    BD+ support www.labdv.com and installs the files in the appropriate locations. 
+    The install will fail if it can't detect an installation of VLC.
+
+.PARAMETER None
+
+.EXAMPLE
+    .\InstallVLCBluray.ps1
+
+.INPUTS
+
+.OUTPUTS
+
+.LINK
+ 
+    https://github.com/angryhussord/
+#>
+
 . ..\Download-File.ps1
 $osarch = (Get-WmiObject -class win32_operatingsystem).OSArchitecture;
 switch ($osarch) {

@@ -1,3 +1,35 @@
+<#
+.SYNOPSIS
+    Downloads a file from a remote URI.
+    Author: Patrick Hufford (angryhussord@outlook.com)
+
+.DESCRIPTION
+    Downloads a file via HTTP or HTTPs to the specified location on the computer. Supports HTTP, HTTPS, and
+    HTTPS while ignoring certificate errors for 3rd party verification if you're using self-signed certs.
+
+.PARAMETER url
+    The address of the file you wish to download.
+
+.PARAMETER path
+    The path on the local computer you want to same the file to.
+
+.PARAMETER IgnoreSSLCertErrors
+    Allows you to bypass cert errors when connecting to servers with self-signed certificates.
+
+.EXAMPLE
+    Download-File 'http://www.file.com/file.zip' 'c:\users\angryhussord\Downloads\'
+    Download-File 'https://www.secure.com/file.zip' 'c:\users\angryhussord\Downloads\'
+    Download-File 'https://localhost/file.zip' 'c:\users\angryhussord\Downloads\' -IgnoreSSLCertErrors
+
+.INPUTS
+
+.OUTPUTS
+
+.LINK
+ 
+    https://github.com/angryhussord/
+#>
+
 function Valid-UrlFormat { 
     param(
         [System.Uri]$url

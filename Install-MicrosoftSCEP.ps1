@@ -1,7 +1,28 @@
-﻿#Install System Center Endpoint Protection
-Write-Output "Installing System Center Endpoint Protection."
+﻿<#
+.SYNOPSIS
+    Install System Center Endpoint Protection for Windows clients. 
+    Author: Patrick Hufford (angryhussord@outlook.com)
+ 
+.DESCRIPTION
+    Silently installs and then immediately updates the SCEP client for Windows.
+    You'll need to have a copy of the installer program from MSDN or some other source in the same directory as this script.
+ 
+.EXAMPLE
+    .\Install-MicrosoftSCEP.ps1    
+ 
+.INPUTS
+    SCEPInstall.exe
+
+.OUTPUTS
+    None
+    
+ .LINK
+ 
+    https://github.com/angryhussord/
+#>
+
+#Install System Center Endpoint Protection
 .\SCEPInstall.exe /S
-Write-Output "Installation complete."
 
 #Need to wait for .NET Optimization service, check to make sure it's running.
 #Check if MsMpEng.exe is running
@@ -18,9 +39,7 @@ if ($count -eq 50) {
 }
 
 #Now, let's update the definitions for SCEP...
-Write-Output "Updating System Center Endpoint Protection definitions..."
 Import-Module "$env:ProgramFiles\Microsoft Security Client\MpProvider";
 Update-MProtSignature -UpdateSource MicrosoftUpdateServer;
-Write-Output "Update complete, performing Quick Scan."
 Start-MProtScan -ScanType QuickScan
-Write-Output "Quick Scan complete."
+Write-Output "System Center Endpoint Protection has been installed and updated.";

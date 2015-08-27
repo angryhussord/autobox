@@ -3,6 +3,8 @@ function Set-WindowsExplorerOptions {
 .SYNOPSIS
 Sets options on the Windows Explorer shell
 
+Author: @mwrock
+
 .PARAMETER EnableShowHiddenFilesFoldersDrives
 If this flag is set, hidden files will be shown in Windows Explorer
 

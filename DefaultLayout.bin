@@ -40,7 +40,7 @@
           <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="{6D809377-6AF0-444B-8957-A3773F02200E}\Microsoft Network Monitor 3\netmon.exe" />
           <start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationID="{6D809377-6AF0-444B-8957-A3773F02200E}\Microsoft Message Analyzer\MessageAnalyzer.exe" />
         </start:Group>
-        <start:Group Name="" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout">
+        <start:Group Name="Media" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout">
           <start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationID="{6D809377-6AF0-444B-8957-A3773F02200E}\VideoLAN\VLC\vlc.exe" />
           <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="{6D809377-6AF0-444B-8957-A3773F02200E}\MPC-HC\mpc-hc64.exe" />
           <start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationID="{6D809377-6AF0-444B-8957-A3773F02200E}\paint.net\PaintDotNet.exe" />

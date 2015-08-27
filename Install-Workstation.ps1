@@ -1,17 +1,29 @@
-#Re-image Post-Install Script
-#Written By: angryhussord
-#Purpose: After re-installing Windows, this will install chocolatey, install packages, then install
-#	custom packages that Chocolatey cannot/does not support.
+<#
+.SYNOPSIS
+    Re-image Post-Install Script 
+    Author: Patrick Hufford (angryhussord@outlook.com)
+.DESCRIPTION
+    After re-installing Windows, this will install chocolatey, install packages, then install custom packages that Chocolatey cannot/does not support. 
+.EXAMPLE
+    .\Install-Workstation.ps1
+.INPUTS
+    None
+.OUTPUTS
+    None
+.LINK
+ 
+    https://github.com/angryhussord/
+#>
 
 #Make sure PowerShell help is useful
-Update-Help
+Update-Help -Confirm:$false;
 
 #Always start with Anti-virus software in case any of the below is compromised.
 .\bitdefender\Install-BitDefender.ps1
 
 #Setup local user profile and add features
 . .\Restart-Explorer.ps1
-.\Move-UserShellFolders.ps1
+. .\Move-UserShellFolders.ps1
 Move-LibraryDirectory 'My Music' 'D:\Music'
 Move-LibraryDirectory 'My Pictures' 'D:\Pictures'
 Move-LibraryDirectory 'My Videos' 'D:\Videos'

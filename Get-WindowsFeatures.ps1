@@ -1,3 +1,26 @@
+<#
+.SYNOPSIS
+    Gets a list of the Windows features available with this version of Windows.
+    Author: Patrick Hufford (angryhussord@outlook.com)
+
+.DESCRIPTION
+    Gets a list of Windows features and then outputs the list with an indicator as to whether or not
+    that feature has been enabled on this computer.
+
+.PARAMETER None
+
+.EXAMPLE
+    .\Get-WindowsFeatures.ps1
+
+.INPUTS
+
+.OUTPUTS
+
+.LINK
+ 
+    https://github.com/angryhussord/
+#>
+
 $output = Dism /online /Get-Features;
 $length = $output.count;
 $count = 0;

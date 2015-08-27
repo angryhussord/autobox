@@ -1,3 +1,24 @@
+<#
+.SYNOPSIS
+	Gets a list of the currently installed security products (AntiVirus, AntiSpyware, and Firewall)
+    Author: Patrick Hufford (angryhussord@outlook.com)
+
+.DESCRIPTION
+	Gets a list of the currently installed security products (AntiVirus, AntiSpyware, and Firewall) and some other
+	information about the location it's installed and the health of each product.
+.PARAMETER None
+.EXAMPLE
+	.\Get-SecurityProducts.ps1 | ft
+
+.INPUTS
+
+.OUTPUTS
+
+.LINK
+ 
+    https://github.com/angryhussord/
+#>
+
 [CmdletBinding()] 
 param ( 
 	[parameter(ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)] 

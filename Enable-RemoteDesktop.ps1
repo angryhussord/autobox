@@ -2,6 +2,7 @@ function Enable-RemoteDesktop {
 <#
 .SYNOPSIS
 Allows Remote Desktop access to machine and enables Remote Desktop firewall rule
+Author: @mwrock
 
 .LINK
 http://boxstarter.org

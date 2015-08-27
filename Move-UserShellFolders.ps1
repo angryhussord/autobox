@@ -2,6 +2,7 @@ function Move-LibraryDirectory {
 <#
 .SYNOPSIS
 Moves a Windows Library folder (My Pictures, personal, downloads, etc) to the given path
+Author: @mwrock
 .DESCRIPTION
 Libraries are special folders that map to a specific location on disk. These are usually found somewhere under $env:userprofile. This function can be used to redirect the library folder to a new location on disk. If the new location does not already exist, the directory will be created. Any content in the former library directory will be moved to the new location unless the DoNotMoveOldContent switch is used. Use Get-LibraryNames to discover the names of different libraries and their current physical directories.
 .PARAMETER libraryName
