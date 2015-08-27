@@ -23,3 +23,5 @@
 
 Register-PackageSource -Name Chocolatey -Location https://chocolatey.org/api/v2/ -Provider PSModule -Trusted
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+Set-PSRepository -Name chocolatey -InstallationPolicy Trusted
+Install-Package NuGet.CommandLine -ProviderName Chocolatey -Confirm:$false
