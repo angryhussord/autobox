@@ -1,0 +1,1 @@
+powercfg /batteryreport /output "$env:userprofile\Desktop\Battery_Report.html"

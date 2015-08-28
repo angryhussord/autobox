@@ -18,6 +18,9 @@
 #Make sure PowerShell help is useful
 Update-Help -Confirm:$false;
 
+.\Update-OEMInformation.ps1
+.\Set-HighPerformancePowerProfile.ps1
+
 #Always start with Anti-virus software in case any of the below is compromised.
 .\bitdefender\Install-BitDefender.ps1
 
