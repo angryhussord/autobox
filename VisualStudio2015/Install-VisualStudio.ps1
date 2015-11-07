@@ -32,7 +32,7 @@ if ((Get-Item vs2015.pro_enu.iso -ErrorAction:SilentlyContinue).count -eq 0) {
 }
 
 #Installs Visual Studio 2015 from the ISO image
-Mount-DiskImage -ImagePath ($ath + "\vs2015.pro_enu.iso");
+Mount-DiskImage -ImagePath ($path + "\vs2015.pro_enu.iso");
 $drive = (Get-Volume | ?{$_.FileSystemLabel -eq "VS2015_PRO_ENU"}).DriveLetter;
 $adminxml = (Get-Location).Path + "\AdminDeployment.xml";
 $cmd = $drive + ":\vs_professional.exe /adminfile $adminxml /quiet /norestart";
